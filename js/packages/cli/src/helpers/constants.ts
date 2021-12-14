@@ -1,4 +1,5 @@
 import { PublicKey, clusterApiUrl } from '@solana/web3.js';
+import path from 'path';
 export const CANDY_MACHINE = 'candy_machine';
 export const AUCTION_HOUSE = 'auction_house';
 export const TOKEN_ENTANGLER = 'token_entangler';
@@ -16,7 +17,9 @@ export const ARWEAVE_PAYMENT_WALLET = new PublicKey(
   '6FKvsq4ydWFci6nGq9ckbjYMtnmaqAoatz5c9XWjiDuS',
 );
 export const CANDY_MACHINE_PROGRAM_ID = new PublicKey(
-  'cndyAnrLdpjq1Ssp1z8xxDsB8dxe7u4HL5Nxi2K5WXZ',
+  // 'cndyAnrLdpjq1Ssp1z8xxDsB8dxe7u4HL5Nxi2K5WXZ',
+  // 'DLC73jY3oeFe9S8GP8M1U52dTDrZDG56GwSLJbqwMXwX'
+  'Ab4QV5PD56RUM5Q4u6fHPykornD9ispV1UXNMksC1V2w',
 );
 
 export const CANDY_MACHINE_PROGRAM_V2_ID = new PublicKey(
@@ -105,7 +108,7 @@ export const CONFIG_ARRAY_START_V2 =
 export const CONFIG_LINE_SIZE_V2 = 4 + 32 + 4 + 200;
 export const CONFIG_LINE_SIZE = 4 + 32 + 4 + 200;
 
-export const CACHE_PATH = './.cache';
+export const CACHE_PATH = path.join(require('os').homedir(), '.cache');
 
 export const DEFAULT_TIMEOUT = 15000;
 
