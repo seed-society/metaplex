@@ -2,12 +2,12 @@
 url = "https://anchor.projectserum.com"
 
 [provider]
-cluster = "devnet"
+cluster = "mainnet"
 wallet = "~/.config/solana/id.json"
 
 [programs.mainnet]
 nft_candy_machine = "cndyAnrLdpjq1Ssp1z8xxDsB8dxe7u4HL5Nxi2K5WXZ"
-nft_candy_machine_v2 = "2wZ2oF2WCTGykseuYzZeWWTe8Acev8PYvkj474pYmFYQ"
+nft_candy_machine_v2 = "Ah5bT4bYvYxnLnazqT7RKRjWdZ3GH5MV5H7AW2a5qWC8"
 fair_launch = "faircnAB9k59Y4TXmLabBULeuTLgV7TkGMGNkjnA15j"
 gumdrop = "gdrpGjVffourzkdDRrQmySw4aTHr8a3xmQzzxSwFD1a"
 
