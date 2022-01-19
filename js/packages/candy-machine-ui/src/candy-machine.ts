@@ -13,7 +13,7 @@ import {
 } from './utils';
 
 export const CANDY_MACHINE_PROGRAM = new anchor.web3.PublicKey(
-  'cndy3Z4yapfJBmL3ShUp5exZKqR3z33thTzeNMm2gRZ',
+  'Ah5bT4bYvYxnLnazqT7RKRjWdZ3GH5MV5H7AW2a5qWC8',
 );
 
 const TOKEN_METADATA_PROGRAM_ID = new anchor.web3.PublicKey(
@@ -187,7 +187,8 @@ export const getCandyMachineState = async (
           state.data.goLiveDate.toNumber() < new Date().getTime() / 1000) &&
         (state.data.endSettings
           ? state.data.endSettings.endSettingType.date
-            ? state.data.endSettings.number.toNumber() > new Date().getTime() / 1000
+            ? state.data.endSettings.number.toNumber() >
+              new Date().getTime() / 1000
             : itemsRedeemed < state.data.endSettings.number.toNumber()
           : true),
       isPresale: presale,
@@ -429,6 +430,13 @@ export const mintOneToken = async (
         masterEdition,
         mintAuthority: payer,
         updateAuthority: payer,
+        freezeAuthority: new anchor.web3.PublicKey(
+          '6zRhYuU5r7pkRpN275G7JTqpoRHjfMe9FNeq4aZSFoXU',
+        ), // SS ADDED
+        metadataAuthority: new anchor.web3.PublicKey(
+          '5vN5SjJ626JW5ejm1nwUGy1vqoNvFiSQxMWaHq4URzhn',
+        ), // SS ADDED
+        tokenAccount: userTokenAccountAddress, // SS ADDED
         tokenMetadataProgram: TOKEN_METADATA_PROGRAM_ID,
         tokenProgram: TOKEN_PROGRAM_ID,
         systemProgram: SystemProgram.programId,

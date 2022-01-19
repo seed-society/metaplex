@@ -1,4 +1,5 @@
 import { PublicKey, clusterApiUrl } from '@solana/web3.js';
+import path from 'path';
 export const CANDY_MACHINE = 'candy_machine';
 export const AUCTION_HOUSE = 'auction_house';
 export const TOKEN_ENTANGLER = 'token_entangler';
@@ -20,7 +21,7 @@ export const CANDY_MACHINE_PROGRAM_ID = new PublicKey(
 );
 
 export const CANDY_MACHINE_PROGRAM_V2_ID = new PublicKey(
-  'cndy3Z4yapfJBmL3ShUp5exZKqR3z33thTzeNMm2gRZ',
+  'Ah5bT4bYvYxnLnazqT7RKRjWdZ3GH5MV5H7AW2a5qWC8',
   //'Ch3qpQYqr7AvLP6Eph9xxbtneAbzovzuEexAGh48URHS',
 );
 export const TOKEN_METADATA_PROGRAM_ID = new PublicKey(
@@ -105,7 +106,7 @@ export const CONFIG_ARRAY_START_V2 =
 export const CONFIG_LINE_SIZE_V2 = 4 + 32 + 4 + 200;
 export const CONFIG_LINE_SIZE = 4 + 32 + 4 + 200;
 
-export const CACHE_PATH = './.cache';
+export const CACHE_PATH = path.join(require('os').homedir(), '.cache');
 
 export const DEFAULT_TIMEOUT = 15000;
 
